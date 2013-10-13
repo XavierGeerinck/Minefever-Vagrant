@@ -1,0 +1,13 @@
+{
+	"default_attributes": {
+		"nginx": {
+			"environment": "development"
+		}
+	},
+	"run_list": [
+		"recipe[common-packages]",
+		"recipe[nginx]",
+		"recipe[mongodb]",
+		"recipe[nodejs]"
+	]
+}

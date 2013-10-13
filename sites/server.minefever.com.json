@@ -1,0 +1,7 @@
+{
+	"run_list": [
+		"recipe[common-packages]",
+		"recipe[mysql]",
+		"recipe[java::oracle]"
+	]
+}

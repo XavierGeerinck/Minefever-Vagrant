@@ -1,0 +1,19 @@
+{
+	"run_list": [
+		"recipe[common-packages]",
+		"recipe[php5-fpm]",
+		"recipe[mysql]",
+		"recipe[nginx]"
+	],
+	"env_run_lists": {
+		"production": [
+			"recipe[nginx::config_production]"
+		],
+		"staging": [
+			"recipe[nginx::config_staging]"
+		],
+		"development": [
+			"recipe[nginx::config_development]"
+		]
+	}
+}
